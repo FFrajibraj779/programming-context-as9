@@ -36,13 +36,13 @@ const ErrorPage = () => {
             <span className='sr-only'>Error</span>404
           </h2>
           <p className='text-2xl font-semibold md:text-3xl mb-8'>
-            Sorry, we couldn't find this page.
+          No Data Found 
           </p>
           <Link
             to='/'
-            className='px-8 py-3 font-semibold rounded bg-cyan-200 text-gray-900'
+            className='px-8 py-3 font-semibold rounded bg-blue-100 text-gray-900'
           >
-            Back to homepage
+             homepage
           </Link>
         </div>
       </div>
