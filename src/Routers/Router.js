@@ -17,27 +17,30 @@ export const router = createBrowserRouter([
     children:[
       {
         path:'/',
+      
         element:<Home></Home>,
       },
       {
         path:'/home',
+        loader: ()=>{
+          return fetch('https://openapi.programming-hero.com/api/quiz')
+        },
         element:<Home></Home>,
       },
       {
          path:'quiz',
-         loader: async()=>{
-          return fetch('https://openapi.programming-hero.com/api/quiz/1')
-         },
+      
          element:<Quiz></Quiz>,
 
       },
-      // {
-      //   path:'quiz/:id',
-      //   loader: async(params)=>{
-      //     fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
-      //   },
-        // element:<Quiz></Quiz>
-      // },
+      {
+        path:'/home/:id',
+        loader: async({params})=>{
+          console.log(params);
+          fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
+        },
+        element:<Quiz></Quiz>
+      },
       {
         path:'/blog',
         element:<Blog></Blog>,

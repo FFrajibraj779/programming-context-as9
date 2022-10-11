@@ -1,16 +1,16 @@
 import React from 'react';
 
-const Option = ({option}) => {
+const Option = ({ option }) => {
     console.log(option);
     return (
         <div className='border-rose-300'>
-        <div  className='flex  gap-2'>
-               
-           <input type="checkbox" name="checkbox" id="" />
-           <p className='text-xl'>{option}</p>
+            <div className='flex  gap-2'>
+
+                <input type="checkbox" name="checkbox" id="" />
+                <p className='text-xl'>{option}</p>
+            </div>
         </div>
-</div>
-       
+
     );
 };
 
