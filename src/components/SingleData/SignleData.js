@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SignleData = ({singleData}) => {
-    console.log(singleData);
+   
     const{id, logo, name, total} = singleData;
     return (
         <div className="card  shadow-xl mt-6">
