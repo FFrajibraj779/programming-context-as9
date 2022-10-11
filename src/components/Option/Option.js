@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Option = ({ option }) => {
-    console.log(option);
+ 
     return (
         <div className='border-rose-300'>
             <div className='flex  gap-2'>

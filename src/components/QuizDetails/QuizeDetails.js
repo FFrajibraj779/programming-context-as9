@@ -2,8 +2,8 @@ import React from 'react';
 import Option from '../Option/Option';
 
 const QuizeDetails = ({ question }) => {
-    console.log(question);
-    const { name, options } = question;
+    
+    const {  options } = question;
     return (
         <div>
             <div className=' w-4/6 m-auto shadow-xl my-10 p-10 relative'>

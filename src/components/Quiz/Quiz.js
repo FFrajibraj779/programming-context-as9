@@ -1,13 +1,14 @@
 
 
-import { useContext } from 'react';
-import { quizContext } from '../../Layout/Root';
+import { useLoaderData } from 'react-router-dom';
 import QuizeDetails from '../QuizDetails/QuizeDetails';
 
 
 const Quiz = () => {
-const QuizeData =useContext(quizContext)
+const QuizeData =useLoaderData()
+console.log(QuizeData);
     const { data } = QuizeData;
+    console.log(data);
 
     const { questions } = data;
 

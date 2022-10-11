@@ -8,17 +8,10 @@ export const quizContext = createContext([])
 
 const Root = () => {
   const quizData = useLoaderData();
-
- 
-
-
-
-  return (
+return (
 
     <quizContext.Provider value={quizData}>
-
-
-      <Navbar></Navbar>
+       <Navbar></Navbar>
       <Outlet></Outlet>
 
      </quizContext.Provider>
