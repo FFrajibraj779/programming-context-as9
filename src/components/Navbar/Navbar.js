@@ -1,35 +1,45 @@
-import React, { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
+
+import { Link, NavLink } from 'react-router-dom';
+import './Navbar.css'
 
 const Navbar = () => {
-    const[open, setOpen]=useState(false);
+
     return (
-        <div>
-             <div onClick={() => setOpen(!open)} className='w-6 h-6 md:hidden'>
-                  {
-                      open ? <XMarkIcon/>: <Bars3Icon/>
-                  }
-  
-              </div>
-            <div>
-            <div>
-              <ul>
-                  <li className={`md:flex justify-center absolute md:static w-full  duration-500 ${open ? 'top-10`' :'top-[-120px]' }`}>
-                  <NavLink to='/home'>Home</NavLink>
-                  <NavLink to='/home'>Topices</NavLink>
-                  <NavLink to='/home'>Blog</NavLink>
-                  <NavLink to='/home'>Contact</NavLink>
-                  </li>
-              </ul>
+        <div className="navbar flex justify-around ">
+
+            <div className="navbar-start lg:hidden sm:block">
+                <div className="dropdown">
+                    <label tabIndex={0} className="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                    </label>
+                    <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <li>
+                            <NavLink className={({ isActive }) => isActive ? "text-blue-500" : undefined} to="/home">Home</NavLink></li>
+                        <li><NavLink to=''>Portfolio</NavLink></li>
+                        <li><NavLink to='/blog'>Blogs</NavLink></li>
+                    </ul>
+                </div>
             </div>
+
+
             <div>
-              <NavLink to='/home'>Programming Context</NavLink>
+
+                <NavLink className=' navTitle text-3xl mt-2l italic' to='/home'>Programming Context</NavLink>
             </div>
-           
-              
-          </div>
+            <div className='hidden lg:block'>
+                <ul className='flex flex-column gap-6 fw-bold '>
+                    <li>
+                        <NavLink className={({ isActive }) => isActive ? "text-blue-500" : undefined} to="/home">Home</NavLink></li>
+                    <li><NavLink to=''>Portfolio</NavLink></li>
+                    <li><NavLink to='/blog'>Blogs</NavLink></li>
+                </ul>
+            </div>
+
+
+
+
         </div>
+
     );
 };
 
