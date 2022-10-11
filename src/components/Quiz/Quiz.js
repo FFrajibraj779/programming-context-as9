@@ -6,9 +6,9 @@ import QuizeDetails from '../QuizDetails/QuizeDetails';
 
 const Quiz = () => {
 const QuizeData =useLoaderData()
-console.log(QuizeData);
+
     const { data } = QuizeData;
-    console.log(data);
+  
 
     const { questions } = data;
 

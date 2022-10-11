@@ -12,7 +12,7 @@ const SignleData = ({ singleData }) => {
         <h2 className="card-title">{name}</h2>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: "center" }} >
           <p>Total Quiz:{total}</p>
-          <Link to='/quiz'>
+          <Link to={`/quiz/${id}`}>
             <button className='btn btn-outline btn-info'>Start Quiz</button>
           </Link>
         </div>

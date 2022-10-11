@@ -1,15 +1,16 @@
 
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import './Home.css'
 import SignleData from '../SingleData/SignleData';
-import { useContext } from 'react';
-import { quizContext } from '../../Layout/Root';
+// import { useContext } from 'react';
+// import { quizContext } from '../../Layout/Root';
 
 
 
 
 const Home = () => {
-const quizData = useContext(quizContext);
+const quizData = useLoaderData()
+
 const{data}=quizData;
 
 
