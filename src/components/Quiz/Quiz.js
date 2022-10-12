@@ -1,5 +1,4 @@
 
-
 import { useLoaderData } from 'react-router-dom';
 import QuizeDetails from '../QuizDetails/QuizeDetails';
 
