@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const SignleData = ({ singleData }) => {
 
   const { id, logo, name, total } = singleData;
-  
+
   return (
     <div className="card  shadow-xl mt-6">
       <figure><img src={logo} alt="Shoes" className='bg-black' /></figure>

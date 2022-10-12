@@ -4,10 +4,10 @@ import QuizeDetails from '../QuizDetails/QuizeDetails';
 
 
 const Quiz = () => {
-const QuizeData =useLoaderData()
+    const QuizeData = useLoaderData()
 
     const { data } = QuizeData;
-  
+
 
     const { questions } = data;
 

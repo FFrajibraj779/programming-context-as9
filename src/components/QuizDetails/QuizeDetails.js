@@ -13,8 +13,8 @@ const QuizeDetails = ({ question }) => {
     }
     return (
         <div>
-            <div className=' w-4/6 m-auto shadow-xl my-10 p-10 relative'>
-                <label onClick={() => correctAns()} htmlFor="my-modal" className=" modal-button absolute right-0">
+            <div className=' w-5/6 m-auto shadow-xl my-10 p-10 relative'>
+                <label htmlFor="my-modal" onClick={() => correctAns()} className=" modal-button absolute right-0 ">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none"
 
                         viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -22,7 +22,7 @@ const QuizeDetails = ({ question }) => {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
                 </label>
-               <input type="checkbox" id="my-modal" className="modal-toggle" />
+                <input type="checkbox" id="my-modal" className="modal-toggle" />
                 <div className="modal">
                     <div className="modal-box">
                         <h3 className="font-bold text-lg">Correct Answer</h3>
@@ -33,7 +33,7 @@ const QuizeDetails = ({ question }) => {
                     </div>
                 </div>
 
-                <h1 className='text-2xl text-blue-700 mt-4'> {question.question} </h1>
+                <h1 className='lg:text-2xl text-blue-700 mt-4'> {question.question} </h1>
                 <div className=' m-auto my-3 p-4 grid grid-cols-2 gap-4'>
                     {
                         options.map(option => <Option option={option} correctAnswer={correctAnswer}></Option>)

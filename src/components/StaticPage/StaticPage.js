@@ -43,8 +43,6 @@ const StaticDetails = () => {
     return (
         <div >
             <h3 className='text-center text-4xl text-info my-10'>Programming Skill</h3>
-
-
             <div style={{ width: "80%" }}>
                 <ResponsiveContainer width=" 100%" aspect={3}>
                     <LineChart className='m-auto ' width={500} height={400} data={data}>
@@ -52,12 +50,9 @@ const StaticDetails = () => {
                         <XAxis dataKey='name' />
                         <YAxis />
                         <Tooltip></Tooltip>
-
                     </LineChart>
                 </ResponsiveContainer>
             </div>
-
-
         </div>
     );
 };

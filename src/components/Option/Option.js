@@ -12,32 +12,26 @@ const Option = ({ option, correctAnswer }) => {
     if (option === correctAnswer) {
       setAns(correctAnswer)
       toast.success('Correct Answer', {
-       position: toast.POSITION.TOP_CENTER
+        position: toast.POSITION.TOP_CENTER
 
       });
-
     }
     else {
       toast.warning('Wrong answer', {
         position: toast.POSITION.TOP_CENTER
 
       });
-
-
     }
-
-
-
   }
 
   return (
     <div>
 
-      <div className='flex  gap-2'>
+      <div className='lg:flex justify-center gap-2'>
         <ToastContainer></ToastContainer>
         <input onClick={() => handleAns(ans)} type="radio" name="radio" id="" />
-        
-        <p className='text-xl'>{option}</p>
+
+        <p className='text-xl '>{option}</p>
 
       </div>
     </div>

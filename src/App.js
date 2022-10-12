@@ -8,13 +8,11 @@ import { router } from './Routers/Router';
 
 
 function App() {
-    return (
+  return (
     <div className="app">
 
-  <RouterProvider router={router}></RouterProvider> 
+      <RouterProvider router={router}></RouterProvider>
 
-
-   
     </div>
   );
 }
