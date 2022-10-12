@@ -4,6 +4,7 @@ import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Home from "../components/Home/Home";
 import Navbar from "../components/Navbar/Navbar";
 import Quiz from "../components/Quiz/Quiz";
+import StaticPage from "../components/StaticPage/StaticPage";
 import Root from "../Layout/Root";
 
 export const router = createBrowserRouter([
@@ -42,6 +43,13 @@ export const router = createBrowserRouter([
         return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
         },
         element:<Quiz></Quiz>
+      },
+      {
+        path:'static',
+        loader:()=>{
+          return fetch('https://openapi.programming-hero.com/api/quiz')
+        },
+        element:<StaticPage></StaticPage>
       },
       {
         path:'/blog',

@@ -18,8 +18,7 @@ const Header = () => {
         </label>
         <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
         <li><NavLink to='/home'>Home</NavLink></li>
-        <li><NavLink to=''>Quizes</NavLink></li>
-        <li><NavLink to='/static'>Static</NavLink></li>
+        <li><NavLink to='/static'>Statistics</NavLink></li>
         <li><NavLink to='/blog'>Blog</NavLink></li>
         </ul>
       </div>
@@ -30,8 +29,7 @@ const Header = () => {
     <div className="navbar-menu hidden lg:block ">
      <ul>
         <li><NavLink className={({isActive})=>isActive ? "text-blue-500" : undefined} to='/home'>Home</NavLink></li>
-        <li><NavLink  className={({isActive})=>isActive ? "text-blue-500" : undefined} to=''>Quizes</NavLink></li>
-        <li><NavLink  className={({isActive})=>isActive ? "text-blue-500" : undefined} to='/static'>Static</NavLink></li>
+        <li><NavLink  className={({isActive})=>isActive ? "text-blue-500" : undefined} to='/static'>Statistics</NavLink></li>
         <li><NavLink  className={({isActive})=>isActive ? "text-blue-500" : undefined} to='/blog'>Blog</NavLink></li>
         
      </ul>

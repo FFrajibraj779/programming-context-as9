@@ -3,47 +3,46 @@ import { toast } from 'react-toastify';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Option = ({ option,correctAnswer }) => {
-   
-    const [ans , setAns] =useState('');
+const Option = ({ option, correctAnswer }) => {
 
-    const handleAns = () =>{
-       
-         if(option === correctAnswer){
-            setAns(correctAnswer)
-          console.log('correct',correctAnswer);
-          toast.success('Correct Answer',  {
-            position: toast.POSITION.TOP_CENTER
-            
-        });
+  const [ans, setAns] = useState('');
 
-        }
-        else{
-          console.log('wrong Answer');
-          toast.warning('Wrong answer',{
-            position: toast.POSITION.TOP_CENTER
-            
-        });
+  const handleAns = () => {
 
-        
-        }
+    if (option === correctAnswer) {
+      setAns(correctAnswer)
+      toast.success('Correct Answer', {
+       position: toast.POSITION.TOP_CENTER
 
-        
+      });
+
+    }
+    else {
+      toast.warning('Wrong answer', {
+        position: toast.POSITION.TOP_CENTER
+
+      });
+
 
     }
 
-    return (
-        <div>
-          
-      <div className='flex  gap-2'>
-      <ToastContainer></ToastContainer>
-                <input onClick={()=>handleAns(ans)} type="checkbox" name="checkbox" id="" />
-                <p className='text-xl'>{option}</p>
-                
-            </div>
-        </div>
 
-    );
+
+  }
+
+  return (
+    <div>
+
+      <div className='flex  gap-2'>
+        <ToastContainer></ToastContainer>
+        <input onClick={() => handleAns(ans)} type="radio" name="radio" id="" />
+        
+        <p className='text-xl'>{option}</p>
+
+      </div>
+    </div>
+
+  );
 };
 
 export default Option;
