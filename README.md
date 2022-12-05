@@ -20,9 +20,9 @@ $ npm start
  my project diploy on the netlify
  netlify lInk (https://netlify.com)
  
- ## Project Link (https://charming-salamander-0ceee5.netlify.app/)
+ ##### Project Link (https://charming-salamander-0ceee5.netlify.app/)
  
- ## github LInk (https://github.com/programming-hero-web-course2/b6-quiz-crackerz-FFrajibraj779)
+ ##### github LInk (https://github.com/programming-hero-web-course2/b6-quiz-crackerz-FFrajibraj779)
 
 
  
